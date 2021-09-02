@@ -9,9 +9,14 @@ public class BossController : MonoBehaviour
     public float timeBetweenShots;
     [SerializeField]
     private float shotTimer;
+    private EnemyHP bossHp;
+    private GameObject eyeBall;
+    public GameObject goalPole;
     void Start()
     {
         shotTimer = timeBetweenShots;
+        bossHp = transform.GetChild(0).GetComponent<EnemyHP>();
+        eyeBall = transform.GetChild(1).gameObject;
     }
     void Update()
     {
@@ -20,6 +25,11 @@ public class BossController : MonoBehaviour
         {
             shotTimer = timeBetweenShots;
             Shoot();
+        }
+        if (bossHp.isDead)
+        {
+            Destroy(eyeBall);
+            goalPole.SetActive(true);
         }
     }
     void Shoot()

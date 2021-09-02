@@ -6,11 +6,10 @@ public class EnemyHP : MonoBehaviour
     public int enemyHP;
     private int currentHP;
     private Animator theAnim;
-    private bool isDead;
+    public bool isDead;
     private Collider2D parentCol;
     private Collider2D hurtboxCol;
     private SpriteRenderer spriteRend;
-    // Start is called before the first frame update
     void Start()
     {
         currentHP = enemyHP;
@@ -19,7 +18,6 @@ public class EnemyHP : MonoBehaviour
         hurtboxCol = GetComponent<Collider2D>();
         spriteRend = transform.parent.GetComponent<SpriteRenderer>();
     }
-    // Update is called once per frame
     void Update()
     {
         if (currentHP <= 0)
@@ -29,7 +27,6 @@ public class EnemyHP : MonoBehaviour
             parentCol.enabled = false;
             hurtboxCol.enabled = false;
             StartCoroutine("KillSwitch");
-            //Destroy(transform.parent.gameObject);
         }
     }
     public void TakeDamage(int damage)
@@ -49,7 +46,6 @@ public class EnemyHP : MonoBehaviour
             spriteRend.enabled = false;
             yield return new WaitForSeconds(0.1f);
             spriteRend.enabled = true;
-
         }
     }
 }
