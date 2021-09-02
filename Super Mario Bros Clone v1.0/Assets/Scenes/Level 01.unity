@@ -1963,7 +1963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageToDeal: 1
-  bounceForce: 2
+  bounceForce: 20
 --- !u!1 &430862102
 GameObject:
   m_ObjectHideFlags: 0
@@ -2165,6 +2165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 451455992}
   - component: {fileID: 451455993}
+  - component: {fileID: 451455994}
   m_Layer: 7
   m_Name: Collider
   m_TagString: Hurtbox
@@ -2212,6 +2213,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3773451, y: 0.6886728}
   m_EdgeRadius: 0
+--- !u!114 &451455994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451455991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9bdea275d44edf40b4916a2e865e9f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHP: 1
 --- !u!1 &508854827
 GameObject:
   m_ObjectHideFlags: 0
@@ -3928,7 +3942,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.004986584, y: -0.21955812}
+  m_Offset: {x: -0.004986584, y: -0.2811222}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3939,7 +3953,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7606467, y: 0.56088376}
+  m_Size: {x: 0.7606467, y: 0.43775558}
   m_EdgeRadius: 0
 --- !u!212 &903013342
 SpriteRenderer:
@@ -5763,7 +5777,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.004986584, y: -0.21955812}
+  m_Offset: {x: -0.004986584, y: -0.2811222}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5774,7 +5788,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7606467, y: 0.56088376}
+  m_Size: {x: 0.7606467, y: 0.43775558}
   m_EdgeRadius: 0
 --- !u!50 &1402780299
 Rigidbody2D:
@@ -7805,6 +7819,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1765271585}
   - component: {fileID: 1765271586}
+  - component: {fileID: 1765271587}
   m_Layer: 7
   m_Name: Collider
   m_TagString: Hurtbox
@@ -7852,6 +7867,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3773451, y: 0.6886728}
   m_EdgeRadius: 0
+--- !u!114 &1765271587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765271584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9bdea275d44edf40b4916a2e865e9f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHP: 1
 --- !u!1 &1772400240
 GameObject:
   m_ObjectHideFlags: 0
