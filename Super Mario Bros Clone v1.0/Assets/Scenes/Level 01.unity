@@ -3885,7 +3885,6 @@ GameObject:
   - component: {fileID: 903013340}
   - component: {fileID: 903013339}
   - component: {fileID: 903013344}
-  - component: {fileID: 903013345}
   m_Layer: 7
   m_Name: Ball Enemies - 01_2
   m_TagString: Enemy
@@ -4041,21 +4040,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!111 &903013345
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 903013338}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: a2c31da571ed43c42a30dedc3f7f99b2, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &908790820
 GameObject:
   m_ObjectHideFlags: 0
@@ -5741,7 +5725,6 @@ GameObject:
   - component: {fileID: 1402780298}
   - component: {fileID: 1402780297}
   - component: {fileID: 1402780302}
-  - component: {fileID: 1402780303}
   m_Layer: 7
   m_Name: Ball Enemies - 01_0
   m_TagString: Enemy
@@ -5897,21 +5880,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!111 &1402780303
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1402780296}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: b07c713a97a04c64daf8c4e0b507a9b5, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &1404279559
 GameObject:
   m_ObjectHideFlags: 0
