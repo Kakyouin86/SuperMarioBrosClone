@@ -1527,6 +1527,10 @@ MonoBehaviour:
   grdCheckerRad: 0.3
   airTime: 0.25
   airTimeCounter: 0
+  childObjs:
+  - {fileID: 0}
+  - {fileID: 0}
+  shockForce: 0
   theGM: {fileID: 1861082013}
 --- !u!95 &394389412
 Animator:

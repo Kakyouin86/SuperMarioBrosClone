@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
     {
         gameOverScreen.SetActive(true);
         thePlayer.gameObject.SetActive(false);
+
+        StartCoroutine("GameReset");
     }
 
     IEnumerator GameReset()
