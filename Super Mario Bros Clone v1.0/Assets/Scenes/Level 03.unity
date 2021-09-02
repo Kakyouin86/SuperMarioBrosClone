@@ -1490,6 +1490,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &525381757 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1925153305489537937, guid: 4f43a133c48f1734384c3c619bb85f60, type: 3}
+  m_PrefabInstance: {fileID: 462593332}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &533511247
 GameObject:
   m_ObjectHideFlags: 0
@@ -4364,7 +4369,7 @@ MonoBehaviour:
   shotForce: 7
   timeBetweenShots: 2
   shotTimer: 0
-  goalPole: {fileID: 0}
+  goalPole: {fileID: 525381757}
 --- !u!114 &1430637895
 MonoBehaviour:
   m_ObjectHideFlags: 0
