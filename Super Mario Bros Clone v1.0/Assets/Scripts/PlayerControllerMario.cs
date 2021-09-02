@@ -14,6 +14,8 @@ public class PlayerControllerMario : MonoBehaviour
     public float grdCheckerRad;
     public float airTime;
     public float airTimeCounter;
+    private bool stoppedJumping;
+    private bool canDoubleJump;
     private bool ctrlActive;
     private bool isDead;
     private Collider2D playerCol;
@@ -32,24 +34,35 @@ public class PlayerControllerMario : MonoBehaviour
         airTimeCounter = airTime;
         dfltSpeed = speed;
         ctrlActive = true;
+        stoppedJumping = true;
     }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
+        grounded = Physics2D.OverlapCircle(grdChecker.position, grdCheckerRad, whatIsGrd);
+
+        if (ctrlActive == true)
+        {
+            MovePlayer();
+            Jump();
+        }
+
+        if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -
+        0.5f)
         {
             canMove = true;
         }
     }
     private void FixedUpdate()
     {
-        grounded = Physics2D.OverlapCircle(grdChecker.position, grdCheckerRad, whatIsGrd);
-        if (ctrlActive == true)
-        {
 
-            MovePlayer();
-            Jump();
-        }
+        //grounded = Physics2D.OverlapCircle(grdChecker.position, grdCheckerRad, whatIsGrd);
+        //
+        //if (ctrlActive == true)
+        //{
+        //    MovePlayer();
+        //    Jump();
+        //}
     }
     void MovePlayer()
     {
@@ -66,17 +79,26 @@ public class PlayerControllerMario : MonoBehaviour
     }
     void Jump()
     {
-        if (grounded == true)
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+            if (grounded)
             {
                 theRB2D.velocity = new Vector2(theRB2D.velocity.x, jumpForce);
+                stoppedJumping = false;
+            }
+            if (!grounded && canDoubleJump)
+            {
+                theRB2D.velocity = new Vector2(theRB2D.velocity.x, jumpForce);
+                stoppedJumping = false;
+                canDoubleJump = false;
+                airTimeCounter = airTime;
             }
         }
-        if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
+        if ((Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0)) && !stoppedJumping)
         {
             if (airTimeCounter > 0)
             {
+
                 theRB2D.velocity = new Vector2(theRB2D.velocity.x, jumpForce);
                 airTimeCounter -= Time.deltaTime;
             }
@@ -84,10 +106,12 @@ public class PlayerControllerMario : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0))
         {
             airTimeCounter = 0;
+            stoppedJumping = true;
         }
         if (grounded)
         {
             airTimeCounter = airTime;
+            canDoubleJump = true;
         }
         theAnimator.SetBool("Grounded", grounded);
     }
@@ -102,7 +126,6 @@ public class PlayerControllerMario : MonoBehaviour
     }
     void PlayerDeath()
     {
-
         isDead = true;
         theAnimator.SetBool("Dead", isDead);
         ctrlActive = false;
@@ -122,6 +145,7 @@ public class PlayerControllerMario : MonoBehaviour
         foreach (GameObject child in childObjs)
             child.SetActive(true);
         theRB2D.gravityScale = 5f;
+
         yield return new WaitForSeconds(0.1f);
         ctrlActive = true;
         theGM.Reset();

@@ -1347,6 +1347,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goal Flag
       objectReference: {fileID: 0}
+    - target: {fileID: 1925153305489537937, guid: 4f43a133c48f1734384c3c619bb85f60, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1925153305489537938, guid: 4f43a133c48f1734384c3c619bb85f60, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -4320,7 +4324,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 10
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -4367,7 +4371,7 @@ MonoBehaviour:
   firePoint: {fileID: 1254959718}
   shotPrefab: {fileID: 6556232878698204592, guid: cbac13432ecc8de468ffb54e34ca7f80, type: 3}
   shotForce: 7
-  timeBetweenShots: 2
+  timeBetweenShots: 1
   shotTimer: 0
   goalPole: {fileID: 525381757}
 --- !u!114 &1430637895
@@ -6350,7 +6354,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: VICTORY!!!
+  m_Text: "YOU BEAT \nTHE FINAL LEVEL!"
 --- !u!222 &1858928493
 CanvasRenderer:
   m_ObjectHideFlags: 0
