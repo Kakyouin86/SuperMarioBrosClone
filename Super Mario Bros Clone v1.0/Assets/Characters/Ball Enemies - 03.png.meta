@@ -292,10 +292,10 @@ TextureImporter:
       name: Ball Enemies - 03_9
       rect:
         serializedVersion: 2
-        x: 144
-        y: 16
-        width: 32
-        height: 12
+        x: 178
+        y: 0
+        width: 12
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,6 +305,27 @@ TextureImporter:
       bones: []
       spriteID: 49d2fd0f6ea2a81f0800000000000000
       internalID: -1041973192410845804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Enemies - 03_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 20
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 820bf5adf9b15e870800000000000000
+      internalID: 8711399427595546664
       vertices: []
       indices: 
       edges: []
