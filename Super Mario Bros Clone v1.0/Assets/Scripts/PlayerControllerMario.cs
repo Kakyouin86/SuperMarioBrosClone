@@ -98,7 +98,6 @@ public class PlayerControllerMario : MonoBehaviour
         {
             if (airTimeCounter > 0)
             {
-
                 theRB2D.velocity = new Vector2(theRB2D.velocity.x, jumpForce);
                 airTimeCounter -= Time.deltaTime;
             }
